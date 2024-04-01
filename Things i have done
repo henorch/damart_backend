@@ -1,0 +1,9 @@
+I have created the user and product schema
+I have created the database connection just to use it
+I created the  gitignore file.
+
+
+
+I need to create the typeDefs for users, product, order
+I have not create the order schema
+i need to create the resolver for each typeDefs

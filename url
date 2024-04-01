@@ -1,0 +1,1 @@
+const mongooseUrl = "mongodb+srv://henorch01:fGwz0p9jJJbN5hUx@damart.3escttb.mongodb.net/?retryWrites=true&w=majority&appName=Damart"
