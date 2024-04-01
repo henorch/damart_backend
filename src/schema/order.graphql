@@ -1,0 +1,34 @@
+
+
+const OrderSchema = `#graphql
+    enum orderStatus {
+        CREATED
+        DELIVERED
+        CANCELLED
+        SHIPPED
+        PROCESSING
+    }
+
+    type Order {
+        customer: String!
+        status: orderStatus!
+        product: [Products]!
+        total: Float!
+        createAt: String!
+        }
+
+    input CreateOrderInput {
+        customer: String!
+        productIds: [ID]!
+        }
+    type Query {
+        allOrder: [Order!]!
+        orderbyId(id: ID): Order!
+    }
+
+    type Mutation {
+        createOrder(input: CreateOrderInput!): Order!
+        updateOrder(input: UpdateOrderInput!): Order!
+        deleteOrder(id: ID!): Boolean!
+    }        
+    `

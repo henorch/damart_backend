@@ -1,6 +1,4 @@
 
-export const ProductstypeDefs = `#graphql
-
     enum Categories {
             KITCHEN _AND_CATERING
             CLOTHING_AND_WARE
@@ -26,5 +24,3 @@ export const ProductstypeDefs = `#graphql
         searchProuctbyString(contain: String): [products!]!
         searchProductbyPrice(price: Float): [products!]!
     }
-
-` 

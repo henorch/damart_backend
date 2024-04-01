@@ -1,11 +1,20 @@
 import { productService } from '../services/productService'
 
-export const productResolver = {
+
+
+
+const productResolver = {
     Query:{
         product: async () => {
             return await productService.getAllProducts
         },
-        searchProuctbyString: (_, {contain}) => products,
-        searchProductbyPrice: (_, {price}) => products 
+        searchProuctbyString: async (_, {contain}) => {
+            return await productService.searchProuctbyString(contain)
+        },
+        searchProductbyPrice: async (_, {price}) => {
+            return await productService.searchProductbyPrice(price)
+        }
     }
 }
+
+module.exports = productResolver;

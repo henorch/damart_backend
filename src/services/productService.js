@@ -20,7 +20,15 @@ const productService = {
             console.error(`product you are search for is currently unavailable`);
             throw error;
         }
-        
+    searchProductbyPrice: async (price) => {
+        try {
+            const priceSearch = await Products.find(price == Products.price === price)
+            return priceSearch
+        } catch (error) {
+            console.error(`There is no product in that price range `);
+            throw error;
+        }
+    }     
     }    
         
 } 
